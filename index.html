@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title> 10 Anos De NEETI </title>
+		  <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
+	
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper {
+            position: fixed;
+            height: 40px;
+            width: 100%;
+            background: rgba(24, 83, 122, 1);
+            }
+        #nav {
+            height: 40px;
+            width: auto;
+            float: right;
+            list-style: none;
+            position: relative;
+        }
+        #nav li {
+            height: 40px;
+            width: 100px;
+            float: left;
+            font-family: 'Fira Sans';
+            text-align: center;
+            line-height: 40px;
+            font-size: 15px;
+            color: white;
+            
+        }
+        #span {
+            height: 4px;
+            width: 100px;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        } 
+        #con {width: 100%;}
+         
+        #last 
+        {
+            height: 100%;
+            width: 100%;
+        }
+
+    </style>
+	</head>
+	<body>
+		<div id="wrapper">
+
+			<ul id="nav">
+				<div id="span"></div>
+				<a href="#con"><li>1O ANOS</li></a>
+				<a href="#con1"><li>SEGUNDA</li></a>
+				<a href="#con2"><li>TERÇA</li></a>
+				<a href="#con3"><li>QUARTA</li></a>
+				<a href="#con4"><li>QUINTA</li></a>
+				<a href="#con5"><li>SEXTA</li></a>
+				<a href="#con6"><li>INFO</li></a>
+			</ul>
+		</div>
+		<div id="con"><img id="last" src="img/Web1.png"/></div>
+		<div id="con1"><img id="last" src="img/Web2.png"/></div>
+		<div id="con2"><img id="last" src="img/Web3.png"/></div>
+		<div id="con3"><img id="last" src="img/Web4.png"/></div>
+		<div id="con4"><img id="last" src="img/Web5.png"/></div>
+		<div id="con5"><img id="last" src="img/Web6.png"/></div>
+		<div id="con6">
+			<a href="http://facebook.com/NEETI.IST" target="_blank">
+				<img id="last" src="img/Web7.png"/> 
+			</a> 
+		</div>
+		
+
+		<script type="text/javascript">
+			function height() {
+				var h = window.innerHeight;
+				document.getElementById('con').style.height = h+"px";
+				document.getElementById('con1').style.height = h+"px";
+				document.getElementById('con2').style.height = h+"px";
+				document.getElementById('con3').style.height = h+"px";
+				document.getElementById('con4').style.height = h+"px";
+				document.getElementById('con5').style.height = h+"px";
+				document.getElementById('con6').style.height = h+"px";
+			}
+
+			function move() {
+				var Y = window.pageYOffset;
+				var h = window.innerHeight;
+				var s = document.getElementById('span');
+
+				if (Y < h) { s.style.left = "0px"}
+				else if (Y < (2*h)) {s.style.left = "100px"}
+				else if (Y < (3*h)) {s.style.left = "200px"}
+				else if (Y < (4*h)) {s.style.left = "300px"}
+				else if (Y < (5*h)) {s.style.left = "400px"}
+				else if (Y < (6*h)) {s.style.left = "500px"}
+				else if (Y >= (6*h)) {s.style.left = "600px"}
+
+			}
+			
+			window.addEventListener('scroll',move);
+			window.addEventListener('load',height);
+			window.addEventListener('resize',height);
+		
+		</script>
+	</body> 
+</html>
